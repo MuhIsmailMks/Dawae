@@ -91,6 +91,7 @@
 /* Footer Blok Warna Biru Atas Awal */
 .block-color-top-footer {
     width: 1920px;
+    max-width: 100%;
     height: 150px;
     background-color: #00309C;
     border-top: solid 5px #8fadff;
