@@ -143,6 +143,10 @@ body {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
+.card-body #game{ 
+    /* background-color: red; */
+}
+
 .card h5 {
     font-family: Prstartk;
     color: white;
