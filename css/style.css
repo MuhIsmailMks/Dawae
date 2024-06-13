@@ -601,10 +601,10 @@ ul li.playing {
 /* Marquee */ 
 .marquee-section_row{
     position: absolute;
-    left: 15px;
+    left: 0;
     width: 30px;
-    height: 1300%; 
-    max-height: 10000px;
+    height: 700%; 
+    max-height: 8000px;
 }
 
 .marquee-section marquee {
@@ -626,7 +626,7 @@ ul li.playing {
 /* DESKTOP VERSION */
 @media (min-width: 1022px) and (max-width: 1922px) {
     .marquee-section_row{
-        height: 500%; 
+        height: 800%; 
     }
 }
 @media (min-width: 992px) {
