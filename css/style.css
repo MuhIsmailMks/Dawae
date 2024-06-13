@@ -118,7 +118,8 @@
 /* HOME PAGE STYLE */
 
 body {
-    background-image: url(../../blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3R9gYIpXjC0M-6kn118teKGTWv9502rly7c3jE8S/s540/c1753d6cba512c4b76ef46ce58bd92e7.gif);
+    /* background-image: url(../../blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3R9gYIpXjC0M-6kn118teKGTWv9502rly7c3jE8S/s540/c1753d6cba512c4b76ef46ce58bd92e7.gif); */
+    background-image: url(../blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3R9gYIpXjC0M-6kn118teKGTWv9502rly7c3jE8S/s540/c1753d6cba512c4b76ef46ce58bd92e7.gif);
     /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center; */
@@ -127,6 +128,7 @@ body {
 
 .body-homepage {
     font-family: Prstartk;
+    max-width: 100%; 
 }
 
 /* Card Home Page */
