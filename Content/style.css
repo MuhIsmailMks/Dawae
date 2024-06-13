@@ -96,7 +96,23 @@
 }
 
 
+.desktop_container{
+	display: none;
+}
 
+.mobile_container{
+	display: block;
+}
+
+@media (min-width: 1000px){
+	.mobile_container{
+		display: none;
+	}
+
+	.desktop_container{
+		display: block; 
+	}
+}
 
 @media (min-width: 992px) {
 	#game {
