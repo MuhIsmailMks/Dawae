@@ -7,7 +7,7 @@
  */
 
 // var AUDIOPATH = 'Content/audio/';
-var BASEPATH = 'Content/index.html';
+var BASEPATH = 'Content/';
 var DIV = '<div />';
 var CLS_FIGURE = 'figure';
 var CLS_MATTER = 'matter';
