@@ -63,10 +63,21 @@ function nextMusic() {
 
 // play or pause button event
 playPauseBtn.addEventListener("click", () => {
-  const isMusicPlay = wrapper.classList.contains("paused");
-  //if isPlayMusic is true then call pauseMusic else call playMusic
+  const isMusicPlay = wrapper.classList.contains("paused"); 
   isMusicPlay ? pauseMusic() : playMusic();
   playingSong();
+
+  
+  let audio = document.getElementById('background-music');  
+  if (audio.paused) {
+    audio.play();
+    audio.loop = true; 
+    wrapper.classList.add("playing"); // Tambahkan kelas jika diperlukan
+  } else {
+    audio.pause();
+    wrapper.classList.remove("playing"); // Hapus kelas jika diperlukan
+  }
+
 });
 
 //prev music button event

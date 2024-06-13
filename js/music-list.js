@@ -14,7 +14,13 @@ let allMusic = [
     name: "It’s The Way by DJ Marky",
     artist: "DJ Marky",
     img: "music-1",
-    src: "music-1"
+    src: "../songs/DJ Marky - Its the way.mp3"
+  },
+  {
+    name: "It’s The Way by DJ Marky",
+    artist: "DJ Marky",
+    img: "music-1",
+    src: "../songs/DJ Marky - Its the way.mp3"
   },
   // {
   //   name: "It’s The Way by Root Soul",
