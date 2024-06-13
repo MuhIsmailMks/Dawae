@@ -125,10 +125,19 @@ body {
     background-position: center; */
 }
 
+.container-fluid{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hidden_game{
+    display: none !important; 
+}
 
 .body-homepage {
     font-family: Prstartk;
     max-width: 100%; 
+    height: auto;
 }
 
 /* Card Home Page */
@@ -592,7 +601,7 @@ ul li.playing {
 /* Marquee */
 .marquee-section marquee {
     position: absolute;
-    height: 15000px;
+    height: 10000px;
     width: 30px;
     background: linear-gradient(180deg, rgba(166, 24, 74, 1) 0%, rgba(166, 24, 74, 1) 70%, rgba(166, 24, 74, 0.8631827731092436) 84%, rgba(166, 24, 74, 0) 100%);
     text-align: center;
