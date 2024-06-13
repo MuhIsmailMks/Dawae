@@ -624,6 +624,11 @@ ul li.playing {
 
 
 /* DESKTOP VERSION */
+@media (min-width: 1022px) and (max-width: 1922px) {
+    .marquee-section_row{
+        height: 500%; 
+    }
+}
 @media (min-width: 992px) {
 
     /* Blok Warna Biru Atas Awal */
