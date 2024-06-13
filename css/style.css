@@ -598,12 +598,19 @@ ul li.playing {
 }
 
 
-/* Marquee */
+/* Marquee */ 
+.marquee-section_row{
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    height: 1300%; 
+    max-height: 10000px;
+}
+
 .marquee-section marquee {
     position: absolute;
-    height: 10000px;
-    width: 30px;
-    left: 15px;
+    height: 100%;
+    width: 30px; 
     background: linear-gradient(180deg, rgba(166, 24, 74, 1) 0%, rgba(166, 24, 74, 1) 70%, rgba(166, 24, 74, 0.8631827731092436) 84%, rgba(166, 24, 74, 0) 100%);
     text-align: center;
     font-size: 20px;
