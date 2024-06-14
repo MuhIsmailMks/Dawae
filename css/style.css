@@ -833,8 +833,13 @@ ul li.playing {
     .icon1{
         width:40px !important;
         height:auto;
-        object-fit:contain;
-        background:red;
+        object-fit:contain; 
+    }
+
+    .text_social{
+        width:50%;
+        text-align:left;
+        margin-left:2rem;
     }
 }
 
