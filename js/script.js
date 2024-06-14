@@ -255,3 +255,6 @@ function clicked(element) {
   playMusic();
   playingSong();
 }
+
+
+// cursor costum

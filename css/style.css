@@ -138,7 +138,13 @@ body {
     font-family: Prstartk;
     max-width: 100%; 
     height: auto;
+  
 }
+
+body {
+    cursor: url('../asset/img/pointer.png') 16 16 , auto !important;
+  }
+ 
 
 /* Card Home Page */
 .card {
@@ -625,7 +631,7 @@ ul li.playing {
     z-index: 1;
 }
 
-
+ 
 /* pop up container */
 .pop_up_container{
     position:fixed;
