@@ -215,17 +215,17 @@ var Level = Base.extend({
 	getGridHeight: function() {
 		return this.raw.height;
 	},
-	setSounds: function(manager) {
-		this.sounds = manager;
-	},
-	playSound: function(label) {
-		if(this.sounds)
-			this.sounds.play(label);
-	},
-	playMusic: function(label) {
-		if(this.sounds)
-			this.sounds.sideMusic(label);
-	},
+	// setSounds: function(manager) {
+	// 	this.sounds = manager;
+	// },
+	// playSound: function(label) {
+	// 	if(this.sounds)
+	// 		this.sounds.play(label);
+	// },
+	// playMusic: function(label) {
+	// 	if(this.sounds)
+	// 		this.sounds.sideMusic(label);
+	// },
 	reset: function() {
 		this.active = false;
 		this.world.empty();
@@ -1247,7 +1247,7 @@ var Mario = Hero.extend({
 		}
 	},
 	victory: function() {
-		this.level.playMusic('success');
+		// this.level.playMusic('success');
 		this.clearFrames();
 		this.view.show();
 		this.setImage(images.sprites, this.state === size_states.small ? 241 : 161, 81);
@@ -1279,7 +1279,7 @@ var Mario = Hero.extend({
 		this.blinking = Math.max(2 * times * constants.blinkfactor, this.blinking || 0);
 	},
 	invincible: function() {
-		this.level.playMusic('invincibility');
+		// this.level.playMusic('invincibility');
 		this.deadly = Math.floor(constants.invincible / constants.interval);
 		this.invulnerable = this.deadly;
 		this.blink(Math.ceil(this.deadly / (2 * constants.blinkfactor)));
@@ -1402,7 +1402,7 @@ var Mario = Hero.extend({
 		this.deathStepDown = Math.ceil(240 / this.deathFrames);
 		this.setupFrames(9, 2, false);
 		this.setImage(images.sprites, 81, 324);
-		this.level.playMusic('die');
+		// this.level.playMusic('die');
 		this._super();
 	},
 	hurt: function(from) {
