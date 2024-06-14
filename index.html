@@ -67,6 +67,7 @@
                 <img src="asset/img/character_dawae.gif" alt="" class="img-fluid mx-auto d-block m-3 ">
             </div>
         </div>
+
         <div class="row">
             
             <div class="col-lg-4">
@@ -309,7 +310,7 @@
                                 <i class="material-icons">more_horiz</i>
                             </div>
                             <div class="img-area">
-                                <img src="#" alt="">
+                                <img src="./asset/img/music.gif" alt="">
                             </div>
                             <div class="song-details">
                                 <p class="name"></p>
@@ -321,7 +322,7 @@
                                 </div>
                                 <div class="song-timer">
                                     <span class="current-time">0:00</span>
-                                    <span class="max-duration">0:00</span>
+                                    <span class="max-duration">3 : 32</span>
                                 </div>
                             </div>
                             <div class="controls">
@@ -382,7 +383,7 @@
                             <div class="col">
                                 <a href="https://opensea.io/collection/itsdawae"
                                     class="btn button d-flex align-items-center justify-content-center"><img
-                                        src="asset/img/icon_sosmed/icon_opensea.png" alt="">OPENSEA</a>
+                                        src="asset/img/icon1.png" alt="">DEXSCREEN</a>
                             </div>
                         </div>
                     </div>
@@ -499,7 +500,7 @@
                             <div class="col">
                                 <a href="https://opensea.io/collection/itsdawae"
                                     class="btn button d-flex align-items-center justify-content-center"><img
-                                        src="asset/img/icon_sosmed/icon_opensea.png" alt="">OPENSEA</a>
+                                    src="asset/img/icon1.png" alt="" class="icon1">DEXSCREEN</a>
                             </div>
                         </div>
                     </div>
@@ -543,9 +544,29 @@
                     <h5 class="card-header">$DAWAE TO MEME MADNISS</h5>
                     <div class="card-body">
 
+
                         <div class="row">
                             <div class="col-lg-6">
-                                <img src="asset/img/image_colletion/DAWAE11.jpg" class="img-fluid" alt="">
+                                <img src="asset/img/image_colletion/meme1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="asset/img/image_colletion/meme2.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="asset/img/image_colletion/meme3.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="asset/img/image_colletion/meme11.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+    
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="asset/img/image_colletion/meme4.png" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6">
                                 <img src="asset/img/image_colletion/DAWAE19.jpg" class="img-fluid" alt="">
@@ -689,7 +710,7 @@
                             <div class="col">
                                 <a href="https://opensea.io/collection/itsdawae"
                                     class="btn button d-flex align-items-center justify-content-center"><img
-                                        src="asset/img/icon_sosmed/icon_opensea.png" alt="">OPENSEA</a>
+                                    src="asset/img/icon1.png" alt="" class="icon1">DEXSCREEN</a>
                             </div>
                         </div>
 
@@ -701,7 +722,7 @@
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2023 Copyright:
+                © 2024 Copyright:
                 <a class="text-white" href="index.html">
                     dawaecoin.xyz
                 </a>
@@ -716,6 +737,25 @@
     <audio autoplay loop id="background-music" >
         <source src="./songs/DJ Marky - Its the way.mp3" type="audio/mp3">
     </audio>
+
+
+
+    <!--  popup  container -->
+      <div class="pop_up_container">
+        <div class="popUp">
+            <div class="bg"></div>
+            <p>DO YOU KNOW THE WAY BRUDDAH?</p>
+            <div class="btns">
+                <button id="no-access">
+                    <span>the way</span>
+                </button>
+                <button id="enter_btn">
+                    <span>da wae</span>
+                </button>
+            </div>
+           
+        </div>
+      </div>
     
 
     <!-- Optional JavaScript -->
@@ -744,6 +784,26 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+
+        $(document).ready(function(){
+            $('#enter_btn').click(function(){
+                $('.pop_up_container').addClass('active');
+                var audio = document.getElementById('background-music');
+                audio.play();
+
+                // $('.play-pause').find('i').text('play_arrow');
+            });
+        });
+
+        $(document).ready(function(){
+            $('#no-access').click(function(){
+                $(this).addClass('shake');
+                setTimeout(() => {
+                    $(this).removeClass('shake');
+                }, 500);  
+            });
+        });
+
     </script>
 
     <!-- File JS Tooltip -->
@@ -755,6 +815,7 @@
         $(function () {
             $("[data-toggle='tooltip']").tooltip();
         });
+
     </script>
 
     <!-- Script Audio Player -->

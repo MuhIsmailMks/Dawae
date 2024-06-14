@@ -22,8 +22,7 @@ window.addEventListener("load", () => {
 
 function loadMusic(indexNumb) {
   musicName.innerText = allMusic[indexNumb - 1].name;
-  musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `images/${allMusic[indexNumb - 1].src}.png`;
+  musicArtist.innerText = allMusic[indexNumb - 1].artist; 
   mainAudio.src = `songs/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
@@ -40,6 +39,19 @@ function pauseMusic() {
   playPauseBtn.querySelector("i").innerText = "play_arrow";
   mainAudio.pause();
 }
+
+const pop_up_containerBtn = document.querySelector('.pop_up_container #enter_btn');
+
+pop_up_containerBtn.addEventListener('click', () => { 
+  // wrapper.classList.remove("paused");
+  // playPauseBtn.querySelector("i").innerText = "play_arrow"; 
+  // mainAudio.pause();
+
+  wrapper.classList.add("paused");
+  playPauseBtn.querySelector("i").innerText = "pause";
+  mainAudio.play();
+})
+
 
 //prev music function
 function prevMusic() {
