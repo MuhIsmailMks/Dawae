@@ -895,7 +895,7 @@ var Coin = Item.extend({
 	},
 	activate: function(from) {
 		if(!this.activated) {
-			this.level.playSound('coin');
+			// this.level.playSound('coin');
 			from.addCoin();
 			this.remove();
 		}
@@ -1018,7 +1018,7 @@ var Star = ItemFigure.extend({
 	release: function() {
 		this.taken = 4;
 		this.active = true;
-		this.level.playSound('mushroom');
+		// this.level.playSound('mushroom');
 		this.view.show();
 		this.setVelocity(constants.star_vx, constants.star_vy);
 		this.setupFrames(10, 2, false);
@@ -1082,7 +1082,7 @@ var Mushroom = ItemFigure.extend({
 	},
 	release: function(mode) {
 		this.released = 4;
-		this.level.playSound('mushroom');
+		// this.level.playSound('mushroom');
 		
 		if(mode === mushroom_mode.plant)
 			this.setImage(images.objects, 548, 60);
@@ -1256,7 +1256,7 @@ var Mario = Hero.extend({
 	shoot: function() {
 		if(!this.cooldown) {
 			this.cooldown = constants.cooldown;
-			this.level.playSound('shoot');
+			// this.level.playSound('shoot');
 			new Bullet(this);
 		}
 	},
@@ -1286,7 +1286,7 @@ var Mario = Hero.extend({
 	},
 	grow: function() {
 		if(this.state === size_states.small) {
-			this.level.playSound('grow');
+			// this.level.playSound('grow');
 			this.setState(size_states.big);
 			this.blink(3);
 		}
@@ -1295,7 +1295,7 @@ var Mario = Hero.extend({
 		if(this.state === size_states.small)
 			this.grow();
 		else
-			this.level.playSound('grow');
+			// this.level.playSound('grow');
 			
 		this.setMarioState(mario_states.fire);
 	},
@@ -1331,7 +1331,7 @@ var Mario = Hero.extend({
 		this.clearFrames();
 	},
 	jump: function() {
-		this.level.playSound('jump');
+		// this.level.playSound('jump');
 		this.vy = constants.jumping_v;
 	},
 	move: function() {
@@ -1371,7 +1371,7 @@ var Mario = Hero.extend({
 		this.level.world.parent().children('#coinNumber').text(this.coins);
 	},
 	addLife: function() {
-		this.level.playSound('liveupgrade');
+		// this.level.playSound('liveupgrade');
 		this.setLifes(this.lifes + 1);
 	},
 	setLifes : function(lifes) {
@@ -1416,7 +1416,7 @@ var Mario = Hero.extend({
 			this.invulnerable = Math.floor(constants.invulnerable / constants.interval);
 			this.blink(Math.ceil(this.invulnerable / (2 * constants.blinkfactor)));
 			this.setState(size_states.small);
-			this.level.playSound('hurt');			
+			// this.level.playSound('hurt');			
 		}
 	},
 }, 'mario');
@@ -1528,11 +1528,11 @@ var Gumpa = Enemy.extend({
 		this.clearFrames();
 		
 		if(this.death_mode === death_modes.normal) {
-			this.level.playSound('enemy_die');
+			// this.level.playSound('enemy_die');
 			this.setImage(images.enemies, 102, 228);
 			this.deathCount = Math.ceil(600 / constants.interval);
 		} else if(this.death_mode === death_modes.shell) {
-			this.level.playSound('shell');
+			// this.level.playSound('shell');
 			this.setImage(images.enemies, 68, this.direction === directions.right ? 228 : 188);
 			this.deathFrames = Math.floor(250 / constants.interval);
 			this.deathDir = 1;
@@ -1662,7 +1662,7 @@ var GreenTurtle = Enemy.extend({
 			this.deathFrames = Math.floor(600 / constants.interval);
 			this.setImage(images.enemies, 102, 437);
 		} else if(this.deathMode === death_modes.shell) {
-			this.level.playSound('shell');
+			// this.level.playSound('shell');
 			this.setImage(images.enemies, 68, (this.state === size_states.small ? (this.direction === directions.right ? 437 : 382) : 325));
 		}
 	},
@@ -1687,7 +1687,7 @@ var GreenTurtle = Enemy.extend({
 		this._super();
 	},
 	hurt: function(opponent) {	
-		this.level.playSound('enemy_die');
+		// this.level.playSound('enemy_die');
 		
 		if(this.state === size_states.small)
 			return this.die();
@@ -1738,7 +1738,7 @@ var SpikedTurtle = Enemy.extend({
 		return true;
 	},
 	die: function() {
-		this.level.playSound('shell');
+		// this.level.playSound('shell');
 		this.clearFrames();
 		this._super();
 		this.setImage(images.enemies, 68, this.direction === directions.left ? 106 : 147);
@@ -1769,7 +1769,7 @@ var Plant = Enemy.extend({
 		this._super(0, 0);
 	},
 	die: function() {
-		this.level.playSound('shell');
+		// this.level.playSound('shell');
 		this.clearFrames();
 		this._super();
 	},
