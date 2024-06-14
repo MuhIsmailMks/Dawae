@@ -11,17 +11,17 @@
 
 let allMusic = [
   {
-    name: "It’s The Way by DJ Marky",
-    artist: "DJ Marky",
+    name: "FIND DA WAE",
+    artist: "DJ UGANDA KNUCKLES",
     img: "music-1",
-    src: "../songs/DJ Marky - Its the way.mp3"
-  },
+    src: "../songs/FIND DA WAE (Original song) [Animation by shgurr] CG5.mp3"
+  }, 
   {
-    name: "It’s The Way by DJ Marky",
-    artist: "DJ Marky",
+    name: "FIND DA WAE",
+    artist: "DJ UGANDA KNUCKLES",
     img: "music-1",
-    src: "../songs/DJ Marky - Its the way.mp3"
-  },
+    src: "../songs/FIND DA WAE (Original song) [Animation by shgurr] CG5.mp3"
+  }, 
   // {
   //   name: "It’s The Way by Root Soul",
   //   artist: "Root Soul",
