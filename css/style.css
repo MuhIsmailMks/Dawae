@@ -830,6 +830,12 @@ ul li.playing {
         height:900%; 
     }
     
+    .icon1{
+        width:40px !important;
+        height:auto;
+        object-fit:contain;
+        background:red;
+    }
 }
 
 /* DESKTOP VERSION */
