@@ -636,7 +636,7 @@ ul li.playing {
     height:100%;
     z-index:99990; 
 
-    background: #00000098;
+    background: #00000098;   -webkit-backdrop-filter: blur(62px);
     backdrop-filter: blur(62px);
 
     display:flex;
@@ -845,6 +845,7 @@ ul li.playing {
         width:50%;
         text-align:left;
         margin-left:2rem;
+        font-size:13px
     }
 
     .youtube_container{
