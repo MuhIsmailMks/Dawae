@@ -775,6 +775,8 @@ ul li.playing {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+
+/* bagian tambahan */
 .shake {
     animation: shake 0.5s;
     animation-iteration-count: 1;
@@ -782,6 +784,10 @@ ul li.playing {
 
 .new_meme{
     width:100%;
+}
+
+.youtube_container{
+    height:700px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
@@ -839,6 +845,10 @@ ul li.playing {
         width:50%;
         text-align:left;
         margin-left:2rem;
+    }
+
+    .youtube_container{
+        height:270px;
     }
 }
 
