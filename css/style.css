@@ -141,9 +141,13 @@ body {
   
 }
 
+
+/* cursor */
 body {
-    cursor: url('../asset/img/pointer.png') 16 16 , auto !important;
+    cursor: url('../asset/img/welcome_xp.png')   , auto !important;
+    /* cursor:none; */
   }
+ 
  
 
 /* Card Home Page */
@@ -796,6 +800,24 @@ ul li.playing {
     height:700px;
 }
 
+.new_memes_text{
+    position:relative;
+    
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+}
+
+.new_memes_text p{
+    position:absolute;
+
+    color:red;
+    font-size:16px;
+    z-index:9;
+
+    top:0;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------ */
  
 /* MOBILE VERSION */
@@ -851,11 +873,15 @@ ul li.playing {
         width:50%;
         text-align:left;
         margin-left:2rem;
-        font-size:13px
+        font-size:13px;
     }
 
     .youtube_container{
         height:270px;
+    }
+
+    .new_memes_text p{
+        font-size:13px;
     }
 }
 
