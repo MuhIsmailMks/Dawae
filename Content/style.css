@@ -6,16 +6,13 @@
 }
 
 #game {
-	height: 200px;
-	width: 400px;
+	height: 250px;
+	width: 100%;
 	max-width: 100%;
-	position: relative;
-	left: 50%;
-	top: 50%;
-	margin-left: -200px;
+	position: relative; 
 	border: 1px solid #ccc;
 	overflow: hidden;
-	border: solid 10px #7c0e35;
+	border: solid 10px #F25C5C;
 	border-radius: 10px;
 	z-index: 999; 
 }
@@ -117,8 +114,8 @@
 
 @media (min-width: 992px) {
 	#game {
-		height: 440px;
-		width: 760px;
-		margin-left: -380px;
+		height: 550px;
+		width: 1300px;
+		/* margin-left: -380px; */
 	}
 }

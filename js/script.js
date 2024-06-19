@@ -4,6 +4,7 @@ const wrapper = document.querySelector(".wrapper"),
   musicName = wrapper.querySelector(".song-details .name"),
   musicArtist = wrapper.querySelector(".song-details .artist"),
   playPauseBtn = wrapper.querySelector(".play-pause"),
+  playPauseBtnImg = wrapper.querySelector(".play-pause img"),
   prevBtn = wrapper.querySelector("#prev"),
   nextBtn = wrapper.querySelector("#next"),
   mainAudio = wrapper.querySelector("#main-audio"),
@@ -22,36 +23,38 @@ window.addEventListener("load", () => {
 });
 
 function loadMusic(indexNumb) {
-  musicName.innerText = allMusic[indexNumb - 1].name;
-  musicArtist.innerText = allMusic[indexNumb - 1].artist; 
+  // musicName.innerText = allMusic[indexNumb - 1].name;
+  // musicArtist.innerText = allMusic[indexNumb - 1].artist; 
   mainAudio.src = `songs/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
 //play music function
 function playMusic() {
-  wrapper.classList.add("paused");
-  playPauseBtn.querySelector("i").innerText = "pause";
+  wrapper.classList.add("paused"); 
+   playPauseBtnImg.src = './asset/img/play_music.svg'
+  // playPauseBtn.querySelector("i").innerText = "pause";
   mainAudio.play();
 }
 
 //pause music function
-function pauseMusic() {
+function pauseMusic() { 
   wrapper.classList.remove("paused");
-  playPauseBtn.querySelector("i").innerText = "play_arrow";
+  playPauseBtnImg.src = './asset/img/paused_music.svg'
+  // playPauseBtn.querySelector("i").innerText = "play_arrow";
   mainAudio.pause();
 }
 
 const pop_up_containerBtn = document.querySelector('.pop_up_container #enter_btn');
 
-pop_up_containerBtn.addEventListener('click', () => { 
-  // wrapper.classList.remove("paused");
-  // playPauseBtn.querySelector("i").innerText = "play_arrow"; 
-  // mainAudio.pause();
+// pop_up_containerBtn.addEventListener('click', () => { 
+//   wrapper.classList.remove("paused");
+//   // playPauseBtn.querySelector("i").innerText = "play_arrow"; 
+//   // mainAudio.pause();
 
-  wrapper.classList.add("paused");
-  playPauseBtn.querySelector("i").innerText = "pause";
-  mainAudio.play();
-})
+//   // wrapper.classList.add("paused");
+//   // playPauseBtn.querySelector("i").innerText = "pause";
+//   mainAudio.play();
+// })
 
 
 //prev music function
@@ -257,3 +260,4 @@ function clicked(element) {
   playingSong();
 }
 
+ 

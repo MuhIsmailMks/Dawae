@@ -115,16 +115,89 @@
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* HOME PAGE STYLE */
-
-body {
-    /* background-image: url(../../blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3R9gYIpXjC0M-6kn118teKGTWv9502rly7c3jE8S/s540/c1753d6cba512c4b76ef46ce58bd92e7.gif); */
-    background-image: url(../blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3R9gYIpXjC0M-6kn118teKGTWv9502rly7c3jE8S/s540/c1753d6cba512c4b76ef46ce58bd92e7.gif);
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
+html{
+    scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "comfortaa_bold";
+    src: url('../asset/font/comfortaa.bold.ttf');
+} 
+/* @font-face {
+    font-family: "comfortaa_bold";
+    src: url('../asset/font/Comfortaa-Bold.ttf');
+}  */
+
+.link_shadow{
+    -webkit-text-stroke:1px black;
+}
+
+.thin_shadow{
+    -webkit-text-stroke:1px black;
+}
+
+.medium_shadow{
+    -webkit-text-stroke:1.7px black;
+}
+
+.bold_shadow{
+    -webkit-text-stroke:3px black;
+}
+
+/* animation */
+/* moving color animation */
+.moving-color_container{
+    position: absolute;
+    width: 98%;
+    height: 96%;
+    
+    clip-path:inherit;
+    background-color: #D51B3C;
+    
+    z-index: 9;
+    overflow: hidden;
+}
+
+.moving-color {
+    width: 100%;
+    height: 290%; 
+    right: 0; 
+    position: absolute; 
+    bottom: 0%; 
+    animation: move-colors 2s linear infinite;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.moving-color span{
+    width: 110%;
+    height: 14%;
+    background-color: white;
+    position: relative;
+}
+
+
+@keyframes move-colors {
+    0% {
+        bottom: -43%;
+    }
+    100% {
+        bottom: 41%;
+    }  
+}
+
+ 
+/* HOME PAGE STYLE */
+body{ 
+       font-family: "comfortaa_bold",  sans-serif;   
+       /* font-family: "comfortaa_bold",  cursive;    */
+}
+ 
 .container-fluid{
     max-width: 100%;
     overflow-x: hidden;
@@ -135,18 +208,11 @@ body {
 }
 
 .body-homepage {
-    font-family: Prstartk;
+    /* font-family: "Comfortaa", sans-serif;  */
+    /* font-family: Prstartk; */
     max-width: 100%; 
     height: auto;
-  
 }
-
-
-/* cursor */
-body {
-    cursor: url('../asset/img/welcome_xp.png')   , auto !important;
-    /* cursor:none; */
-  }
  
  
 
@@ -274,9 +340,9 @@ body {
 }
 
 .button:hover {
-    border: solid 3px #9b1745;
+    /* border: solid 3px #9b1745;
     background: #770e33;
-    color: white;
+    color: white; */
 }
 
 /* Card Token */
@@ -329,8 +395,7 @@ body {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Prstartk;
+    box-sizing: border-box; 
 }
 
 *::before,
@@ -818,6 +883,49 @@ ul li.playing {
     top:0;
 }
 
+
+/* animation */
+.cloud{
+    animation: cloud_animation 5s linear infinite; 
+}
+
+/* memes */
+.memes_animation{
+    animation: memes_animation 20s linear infinite; 
+    width:calc(25vw * 9);
+}
+
+.memes_container.reverse_animation .memes_animation{ 
+    animation-direction: alternate-reverse;
+}
+
+.memes_animation .slide{
+    perspective:100px;
+    padding:15px;
+}
+
+.memes_container:hover .memes_animation{
+    animation-play-state: paused; 
+}
+
+.memes_container .memes_animation img{
+    transition:.3s ease-in;
+}
+
+.memes_container .memes_animation img:hover{
+    transform: scale(1.1);
+}
+
+
+@keyframes memes_animation {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(calc(-25vw* 5))
+    }
+}
+ 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
  
 /* MOBILE VERSION */
@@ -834,6 +942,41 @@ ul li.playing {
     .popUp p, 
     .popUp .btns{
         flex-direction:column
+    }
+
+       /* utility style */
+    
+       .thin_shadow{
+        -webkit-text-stroke:0.75px black;
+       }
+
+       .medium_shadow{
+         -webkit-text-stroke:1.25px black;
+        }
+
+       .medium_shadow.v2{
+         -webkit-text-stroke:.95px black;
+        }
+
+    .bold_shadow{
+        -webkit-text-stroke:1.85px black;
+    }
+}
+
+@media (max-width: 768px){
+    .memes_animation{
+        animation: memes_animation 10s linear infinite; 
+    
+        width:calc(35vw * 9);
+    }
+     
+    @keyframes memes_animation {
+        from {
+            transform: translate(0%);
+        }
+        to {
+            transform: translate(calc(-35vw* 5))
+        }
     }
 }
 
@@ -883,6 +1026,29 @@ ul li.playing {
     .new_memes_text p{
         font-size:13px;
     }
+
+    /* utility style */
+    .thin_shadow{
+        -webkit-text-stroke:0.45px black;
+       }
+       
+    .medium_shadow{
+        -webkit-text-stroke:0.75px black;
+    }
+
+    .medium_shadow.v2{
+        -webkit-text-stroke:.55px black;
+       }
+
+    .bold_shadow{
+        -webkit-text-stroke:1.5px black;
+    }
+
+    /* hero */
+    .link_shadow{
+        -webkit-text-stroke:.5px black;
+    }
+    
 }
 
 /* DESKTOP VERSION */
