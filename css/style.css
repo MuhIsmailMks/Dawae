@@ -921,9 +921,9 @@ ul li.playing {
     }
 }
 
-/* cloud */
+/* rockets */
 .rockets{
-    animation: rockets_animation 25s linear infinite; 
+    animation: rockets_animation 15s linear infinite; 
 }
 
 @keyframes rockets_animation {
@@ -933,6 +933,69 @@ ul li.playing {
     100% {
         transform: translateX(-110vw)
     }
+}
+
+/* howTo */
+.dawae_howTo{
+    animation: dawae_howTo_animation 5s linear infinite; 
+}
+
+@keyframes dawae_howTo_animation {
+    0% {
+        transform: translateX(10vw);
+    }
+    100% {
+        transform: translateX(-110vw)
+    }
+}
+
+/* color change */
+.color_changing_text1 { 
+    animation: colorChange1 5s linear infinite; 
+}
+
+@keyframes colorChange1 {
+    0%,100%{
+        color: #68FFA5;
+    } 
+    40% {
+        color: #FF68C2;
+    }
+    80% {
+        color: #FF8A98;
+    } 
+}
+
+.color_changing_text2 { 
+    animation: colorChange2 5s linear infinite; 
+}
+
+@keyframes colorChange2 {
+    0%,100%{
+        color: #FF68C2;
+    } 
+    40% {
+        color: #FF8A98;
+    }
+    80% {
+        color: #68FFA5;
+    } 
+}
+
+.color_changing_text3 { 
+    animation: colorChange3 5s linear infinite; 
+}
+
+@keyframes colorChange3 {
+    0%,100%{
+        color: #FF8A98;
+    } 
+    40% {
+        color: #68FFA5;
+    }
+    80% {
+        color: #FF68C2;
+    } 
 }
 
 
