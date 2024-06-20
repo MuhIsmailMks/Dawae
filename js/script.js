@@ -169,15 +169,16 @@ function pauseMusic() {
 
 const pop_up_containerBtn = document.querySelector('.pop_up_container #enter_btn');
 
-// pop_up_containerBtn.addEventListener('click', () => { 
-//   wrapper.classList.remove("paused");
-//   // playPauseBtn.querySelector("i").innerText = "play_arrow"; 
-//   // mainAudio.pause();
+pop_up_containerBtn.addEventListener('click', () => { 
+  wrapper.classList.remove("paused");  
+  mainAudio.pause();
 
-//   // wrapper.classList.add("paused");
-//   // playPauseBtn.querySelector("i").innerText = "pause";
-//   mainAudio.play();
-// })
+ 
+
+  wrapper.classList.add("paused");
+  playPauseBtnImg.src = './asset/img/play_music.svg'
+  mainAudio.play();
+})
 
 
 //prev music function

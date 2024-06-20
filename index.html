@@ -51,13 +51,14 @@
         
         
         <!-- hero section -->
-        <section class="w-full h-auto relative pt-[100px] pb-[70px] bg-[#6DD8CE] flex flex-col items-center">
+        <section class="w-full h-auto relative pt-[100px] pb-[70px] bg-[#6DD8CE] flex flex-col items-center min-[2000px]:pb-[200px]">
 
             <!-- bg hero -->
              <div class="bg absolute w-full h-full bottom-0 left-0 z-0 flex justify-center items-center overflow-hidden">
-                <img src="./asset/img/hero_land.svg" alt="" class="w-[110vw] h-[60vw] xl:h-[60vw] min-[1700px]:h-[50vw] absolute bottom-0 xl:bottom-[-35%] min-[1700px]:bottom-[-60%] min-[2500px]:bottom-[-30vw] object-cover">
+                
+                <img src="./asset/img/hero_land.svg" alt="" class="w-[110vw] h-[60vw] xl:h-[60vw] min-[1500px]:h-[50vw] min-[1700px]:h-[50vw] absolute bottom-0 xl:bottom-[-35%] min-[1500px]:bottom-[-40%] min-[2500px]:bottom-[-26vw] object-cover">
                 <!-- grass -->
-                <img src="./asset/img/grass.svg" alt="" class="w-[90%] max-w-[2000px] h-auto object-contain absolute bottom-[20px] ">
+                <img src="./asset/img/grass.svg" alt="" class="w-[90%]  max-w-[2000px] h-auto object-contain absolute bottom-[20px] ">
 
                 <!-- rockets -->
                 <img src="./asset/video/dawae_rockets.gif" alt="" class="w-[150px] md:w-[200px] h-auto object-contain absolute right-[-12%] top-[5%] z-[3] rockets">
@@ -339,8 +340,8 @@
               <div class="w-[95%] h-[350px] min-[500px]:h-[450px] xl:h-[650px] relative flex items-center justify-center flex-col xl:mt-[100px] min-[500px]:mt-[100px] xl:pt-[70px]">
 
                 <!-- title -->
-                 <div class="w-[90%]  xl:w-[800px] h-[100px] absolute top-[-20px] min-[500px]:top-0 flex items-center justify-center z-[2] cursor-pointer duration-200 hover:rotate-[5deg]">
-                    <img src="./asset/img/bg_roadmap_title.svg" alt="" class="absolute w-auto h-[60px] xl:h-[125px] object-cover">
+                 <div class="w-[90%] max-w-[100%]  xl:w-[800px] h-[100px] absolute top-[-20px] min-[500px]:top-0 flex items-center justify-center z-[2] cursor-pointer duration-200 hover:rotate-[5deg]">
+                    <img src="./asset/img/bg_roadmap_title.svg" alt="" class="absolute w-auto h-[60px] xl:h-[125px] object-contain min-[500px]:object-cover">
                     <p class="relative medium_shadow rotate-[-3deg] text-white text-[23px] xl:text-[40px]">DAWAE ROADMAP</p>
                  </div>
                     
@@ -770,7 +771,7 @@
 
 
     <!--  popup  container -->
-      <!-- <div class="pop_up_container">
+      <div class="pop_up_container hidden">
         <div class="popUp">
             <div class="bg"></div>
             <p>DO YOU KNOW THE WAY BRUDDAH?</p>
@@ -784,7 +785,7 @@
             </div>
            
         </div>
-      </div> -->
+      </div>
 
       
    <!-- aos js scroll animation -->
