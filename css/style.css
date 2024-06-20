@@ -1081,7 +1081,7 @@ ul li.playing {
     .memes_animation{
         animation: memes_animation 10s linear infinite; 
     
-        width:calc(35vw * 9);
+        width:calc(50vw * 9);
     }
      
     @keyframes memes_animation {
@@ -1089,7 +1089,7 @@ ul li.playing {
             transform: translate(0%);
         }
         to {
-            transform: translate(calc(-35vw* 5))
+            transform: translate(calc(-50vw* 5))
         }
     }
 }
