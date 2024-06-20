@@ -122,11 +122,12 @@ html{
 @font-face {
     font-family: "comfortaa_bold";
     src: url('../asset/font/comfortaa.bold.ttf');
-} 
-/* @font-face {
-    font-family: "comfortaa_bold";
-    src: url('../asset/font/Comfortaa-Bold.ttf');
-}  */
+}
+
+@font-face {
+    font-family: "Prstartk";
+    src: url('../asset/font/prstartk.ttf');
+}  
 
 .link_shadow{
     -webkit-text-stroke:1px black;
@@ -209,9 +210,13 @@ body{
 
 .body-homepage {
     /* font-family: "Comfortaa", sans-serif;  */
-    /* font-family: Prstartk; */
+    
     max-width: 100%; 
     height: auto;
+}
+
+.Prstartk_font{
+font-family: Prstartk, sans-serif;
 }
  
  
