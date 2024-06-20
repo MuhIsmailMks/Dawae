@@ -865,6 +865,10 @@ ul li.playing {
     animation-iteration-count: 1;
 }
 
+.hero_links a:hover{
+    color:#a407b3 !important;
+}
+
 .new_meme{
     width:100%;
 }
