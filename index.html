@@ -63,15 +63,15 @@
 
                 <!-- clouds -->
                  <!-- left -->
-                <img src="./asset/img/clouds2.svg" alt="" class="w-[60px] lg:w-[100px] h-auto object-contain absolute left-0 top-0 ">
-                <img src="./asset/img/clouds2.svg" alt="" class="w-[95px] h-auto object-contain absolute left-[20%] top-[5%] max-[1024px]:hidden">
-                <img src="./asset/img/clouds.svg" alt="" class="w-[60px] lg:w-[100px] h-auto object-contain absolute left-[10%] top-[20%] "> 
-                <img src="./asset/img/clouds.svg" alt="" class="w-[100px] h-auto object-contain absolute left-[1%] top-[40%] max-[1024px]:hidden"> 
+                <img src="./asset/img/clouds2.svg" alt="" class="w-[60px] lg:w-[100px] h-auto object-contain absolute left-0 top-0 cloud" style="animation-duration: 30s;">
+                <img src="./asset/img/clouds2.svg" alt="" class="w-[95px] h-auto object-contain absolute left-[20%] top-[5%] max-[1024px]:hidden cloud" style="animation-duration: 24s;">
+                <img src="./asset/img/clouds.svg" alt="" class="w-[60px] lg:w-[100px] h-auto object-contain absolute left-[10%] top-[20%] cloud" style="animation-duration: 35s; animation-delay: -3s;"> 
+                <img src="./asset/img/clouds.svg" alt="" class="w-[50px] lg:w-[100px] h-auto object-contain absolute left-[1%] top-[40%]  cloud"> 
 
-                  <!-- left -->
-                  <img src="./asset/img/clouds.svg" alt="" class="w-[60px] lg:w-[120px] h-auto object-contain absolute right-[-2%] top-0 ">
-                  <img src="./asset/img/clouds2.svg" alt="" class="w-[105px] h-auto object-contain absolute right-[20%] top-[-2%] max-[1024px]:hidden">
-                  <img src="./asset/img/clouds2.svg" alt="" class="w-[105px] h-auto object-contain absolute right-[15%] top-[15%] max-[1024px]:hidden">
+                  <!-- right -->
+                  <img src="./asset/img/clouds.svg" alt="" class="w-[60px] lg:w-[120px] h-auto object-contain absolute right-[-2%] top-0 cloud" style="animation-duration: 27s; animation-delay: -2s;">
+                  <img src="./asset/img/clouds2.svg" alt="" class="w-[105px] h-auto object-contain absolute right-[20%] top-[-2%] max-[1024px]:hidden cloud" style="animation-duration: 33s;">
+                  <img src="./asset/img/clouds2.svg" alt="" class="w-[105px] h-auto object-contain absolute right-[15%] top-[15%] max-[1024px]:hidden cloud" style="animation-duration: 40s;">
 
              </div>
 
@@ -90,8 +90,8 @@
              </div>
 
              <!-- contract -->
-              <div class="flex justify-center items-center  w-[90%] xl:w-[1200px] h-[50px] xl:h-[100px]  relative z-[2]   border-[3px] border-black ">
-                <div class="ca flex justify-center items-center h-full w-[80%] bg-white text-white max-[400px]:text-[3vw] text-[15px] md:text-[30px] xl:text-[50px] medium_shadow">
+              <div class="copy_address flex justify-center items-center  w-[90%] xl:w-[1200px] h-[50px] xl:h-[100px]  relative z-[2]   border-[3px] border-black ">
+                <div class="ca flex justify-center items-center h-full w-[80%] bg-white text-white max-[400px]:text-[3vw] text-[15px] md:text-[30px] xl:text-[50px] medium_shadow value" data-set="0x00000000000000000000000">
                     <span>0x00000000000000000000000.....dEaD</span>
                 </div>
                 <div class="copy cursor-pointer flex justify-center items-center h-full w-[21%] bg-[#F25C5C]">
@@ -108,7 +108,7 @@
             <img src="./asset/img/chart.png" alt="" class="border-[#68FFA5] border-[6px] h-auto object-contain w-[90%] max-w-[1700px]">
 
             <!-- dawae -->
-            <img src="./asset/img/dawae_image.png" alt="" class=" border-[6px] h-auto object-contain w-[90%] max-w-[1700px]">
+            <img src="./asset/img/dawae_image.png" alt="" class=" border-[6px] h-auto object-contain w-[90%] max-w-[1700px] float">
          </section>
 
           <!--about -->
@@ -140,13 +140,12 @@
 
                 <div class="ca flex justify-center items-center absolute w-full left-0 top-0 h-full z-[1]  ">  
 
-                    <div class="text  cursor-pointer z-[1] relative w-[290px] h-[20px] min-[550px]:w-[320px] md:w-[400px] xl:w-[1010px] min-[1500px]:w-[1050px] xl:h-[70px]   flex justify-center items-center copy-contract ">
-
-                        <div class="copied hidden absolute bg-[#1f921f] top-[-50px] h-[40px] w-[70px]  justify-center items-center ">
-                            <span class="text-[.8rem] w-[95%] h-[90%] bg-green-500 flex justify-center items-center ink-free_font">copied</span>
-                          </div>
-                          <input type="text" value=" 0x012....6e53" class="opacity-0 absolute contractInput">
-                        <p class="relative text-white medium_shadow ca_text ink-free_font text-[11px] md:text-[18px] xl:text-[42px] min-[1700px]:text-[40px] z-[1]">0x00000000000000000000000.....dEaD</p>
+                    <div class="text copy_address  cursor-pointer z-[1] relative w-[290px] h-[20px] min-[550px]:w-[320px] md:w-[400px] xl:w-[1010px] min-[1500px]:w-[1050px] xl:h-[70px]   flex justify-center items-center copy-contract ">
+ 
+                        <input type="text" value=" 0x012....6e53" class="opacity-0 absolute contractInput">
+                        <p class="relative text-white medium_shadow ca_text ink-free_font text-[11px] md:text-[18px] xl:text-[42px] min-[1700px]:text-[40px] z-[1] value" data-set="0x00000000000000000000000">
+                            <span>0x00000000000000000000000.....dEaD</span>
+                        </p>
                         <div class="icon ml-[.75rem] z-10">
                             <img src="./assets/images/copyIcon.svg" alt="" class="h-auto object-contain w-[20px] md:w-[25px] lg:w-[30px] min-[1700px]:w-[1vw]">
                         </div>
@@ -292,8 +291,8 @@
                  <img src="./asset/img/token_text.svg" alt="" class="relative w-[80%] xl:w-[600px]  h-auto z-[1]">
 
                  <!-- ca -->
-                 <div class="flex justify-center items-center  w-[85%] xl:w-[60%] h-[50px] xl:h-[60px]  relative z-[2]   border-[3px] border-black my-[2rem]">
-                    <div class="ca flex justify-center items-center h-full w-[85%] lg:w-[80%] bg-white text-white max-[400px]:text-[3vw] text-[14px] xl:text-[21px]  thin_shadow">
+                 <div class="flex copy_address justify-center items-center  w-[85%] xl:w-[60%] h-[50px] xl:h-[60px]  relative z-[2]   border-[3px] border-black my-[2rem]">
+                    <div class="ca flex justify-center items-center h-full w-[85%] lg:w-[80%] bg-white text-white max-[400px]:text-[3vw] text-[14px] xl:text-[21px]  thin_shadow value" data-set="0x00000000000000000000000">
                         <span>0x00000000000000000000000.....dEaD</span>
                     </div>
                     <div class="copy cursor-pointer flex justify-center items-center h-full w-[15%] lg:w-[21%] bg-[#F25C5C]">
@@ -336,10 +335,10 @@
              </div>
 
              <!-- roadmap -->
-              <div class="w-full h-[550px] xl:h-[850px] relative flex items-center justify-center flex-col mt-[100px] min-[500px]:pt-[100px] xl:pt-[70px]">
+              <div class="w-[95%] h-[550px] xl:h-[850px] relative flex items-center justify-center flex-col xl:mt-[100px] min-[500px]:pt-[100px] xl:pt-[70px]">
 
                 <!-- title -->
-                 <div class=" w-[90%] min-[500px]:w-[400px] xl:w-[800px] h-[300px] absolute top-0 flex items-center justify-center z-[2]">
+                 <div class=" w-[90%] min-[500px]:w-[400px] xl:w-[800px] h-[300px] absolute top-[-20px] xl:top-0 flex items-center justify-center z-[2]">
                     <img src="./asset/img/bg_roadmap_title.svg" alt="" class="absolute w-full  h-full object-contain">
                     <p class="relative medium_shadow rotate-[-3deg] text-white text-[23px] xl:text-[40px]">DAWAE ROADMAP</p>
                  </div>
@@ -407,7 +406,7 @@
                 <div class="w-full max-w-[2000px] h-auto relative flex items-center flex-col min-[500px]:gap-[2rem] xl:gap-[4rem]">
 
                     <!-- how to 1 -->
-                     <div class="relative w-full flex justify-center md:justify-start h-auto px-[2rem]">
+                     <div class="how_to1 relative w-full flex justify-center md:justify-start h-auto px-[2rem]">
 
                         <div class="w-[370px] min-[500px]:w-[400px] md:w-[440px] h-[260px] md:h-[300px] lg:w-[706px] lg:h-[405px] relative flex justify-center items-center py-[3rem] px-[2rem]">
                             <img src="./asset/img/bg_how01.svg" alt="" class="w-full h-full absolute z-0 object-contain">
@@ -426,7 +425,7 @@
                      </div>
 
                       <!-- how to 2 -->
-                      <div class="relative w-full flex justify-center md:justify-end h-auto px-[2rem]">
+                      <div class="relative how_to2 w-full flex justify-center md:justify-end h-auto px-[2rem]">
 
                         <div class="w-[370px] min-[500px]:w-[400px] md:w-[440px] h-[260px] md:h-[300px] lg:w-[706px] lg:h-[405px] relative flex justify-center items-center pt-[4rem] px-[2rem]">
                             <img src="./asset/img/bg_how02.svg" alt="" class="w-full h-full absolute top-0 z-0 object-contain">
@@ -446,7 +445,7 @@
                       </div>
 
                         <!-- how to 3 -->
-                        <div class="relative w-full flex justify-center md:justify-start h-auto px-[2rem]">
+                        <div class="relative how_to3 w-full flex justify-center md:justify-start h-auto px-[2rem]">
 
                             <div class="w-[370px] min-[500px]:w-[400px] md:w-[440px] h-[260px] md:h-[300px] lg:w-[760px] lg:h-[405px] relative flex justify-center items-center pt-[3rem] lg:pt-[4rem] px-[2rem]">
                                 <img src="./asset/img/bg_how03.svg" alt="" class="w-full h-full absolute top-0 z-0 object-contain">
@@ -465,7 +464,7 @@
                           </div>
 
                      <!-- how to 4 -->
-                     <div class="relative w-full flex justify-center md:justify-end h-auto px-[2rem]">
+                     <div class="relative how_to4 w-full flex justify-center md:justify-end h-auto px-[2rem]">
 
                         <div class="w-[370px] min-[500px]:w-[400px] md:w-[440px] h-[260px] md:h-[300px] lg:w-[760px] lg:h-[405px] relative flex justify-center items-center pt-[2rem] lg:pt-[4rem] px-[2rem]">
                             <img src="./asset/img/bg_how04.svg" alt="" class="w-full h-full absolute top-0 z-0 object-contain">
@@ -647,7 +646,7 @@
                                 <img src="./asset/img/prev_music.svg" alt="" class="w-[40px] h-auto object-contain">
                             </div>
                             <div class="play-pause">
-                                <div class="   relative z-[1]"> 
+                                <div class="relative z-[1] play"> 
                                     <img src="./asset/img/paused_music.svg" alt="" class="w-[40px] h-auto object-contain">
                                 </div>
                                 <i></i>
@@ -761,7 +760,7 @@
 
 
     <!-- music -->
-    <audio autoplay loop id="background-music " >
+    <audio autoplay loop id="background-music" >
         <source src="./songs/FIND DA WAE (Original song) [Animation by shgurr] CG5.mp3" type="audio/mp3">
     </audio>
 
@@ -785,28 +784,12 @@
       </div> -->
 
       
-
-       <!-- games -->
-    <!-- <div class="card game_container desktop_container">
-        <h5 class="card-header">PLAY $DAWAE</h5>
-        <div class="card-body">
-            <div id="game">
-                <div id="world">
-                </div>
-                <div id="coinNumber" class="gauge">0</div>
-                <div id="coin" class="gaugeSprite"></div>
-                <div id="liveNumber" class="gauge">0</div>
-                <div id="live" class="gaugeSprite"></div>
-            </div>
- 
-        </div>
-    </div> -->
-
-    <!-- play music -->
-    
- 
-
-
+   <!-- aos js scroll animation -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <!-- scroll magic -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
 
     <!-- Optional JavaScript -->
@@ -827,6 +810,7 @@
     <script src="Scripts/keys.js"></script>
     <script src="Scripts/constants.js"></script>
     <script src="Scripts/main.js"></script>
+
     <!-- Script Button Copy -->
     <script>
         function myFunction() {

@@ -1,4 +1,127 @@
  
+ 
+//  copy btn
+const copybtns = document.querySelectorAll(".copy_address");
+    
+copybtns.forEach(copybtn => {
+    copybtn.addEventListener("click", function() { 
+    let textSpan = copybtn.querySelector('span');
+    let intervalId;
+        let addressText = document.querySelector(".value").getAttribute('data-set');
+        textSpan.innerHTML = 'COPIED';
+
+        if (intervalId) {  
+            clearInterval(intervalId);
+        }
+
+        intervalId = setInterval(() => {
+            textSpan.innerHTML = '0x00000000000000000000000.....dEaD'; 
+            clearInterval(intervalId);  
+        }, 1000);
+
+        navigator.clipboard.writeText(addressText);
+    }); 
+
+})
+
+
+// light on off
+let light_left = document.querySelector('.light_left');
+  let light_right = document.querySelector('.light_right');
+  let backgroundContract = document.querySelector('.backgroundContract');
+
+    const imagesLeft = [
+      './asset/img/light_off_left.png',
+      './asset/img/light_on_left.png', 
+  ];
+
+  const imagesRight = [
+    './asset/img/light_off_right.png',
+    './asset/img/light_on_right.png', 
+  ];
+
+  let currentIndex = 0;
+  let currentIndex2 = 0;
+  let elseTrue = false;
+
+  function changeImageLeft() { 
+      currentIndex = (currentIndex + 1) % imagesLeft.length;
+      light_left.src = imagesLeft[currentIndex];
+  }
+
+  function changeImageRight() { 
+    currentIndex2 = (currentIndex2 + 1) % imagesRight.length;
+    light_right.src = imagesRight[currentIndex2];
+  }
+
+  function bgContract() { 
+    elseTrue = !elseTrue
+    if(elseTrue === false){
+      backgroundContract.classList.add('hidden')
+    } else {
+      backgroundContract.classList.remove('hidden')
+    }
+  }
+
+  setInterval(changeImageLeft, 2000);
+  setInterval(changeImageRight, 2000);
+  setInterval(bgContract, 2000);
+
+
+// controller ScrollMagic
+let controller = new ScrollMagic.Controller();
+
+// animation scroll effect
+const animations = [
+  { selector: ".how_to1", duration: 7000, x: 100 }, 
+  { selector: ".how_to2", duration: 8000, x: -100 }, 
+  { selector: ".how_to3", duration: 7000, x: 100 }, 
+  { selector: ".how_to4", duration: 8000, x: -100 }, 
+];
+
+
+function adjustXValue() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 1200) { 
+    animations.forEach(animation => {
+      if (animation.hasOwnProperty('x')) {  
+        animation.x = animation.x * 4;
+      }
+      if (animation.hasOwnProperty('y')) { 
+        animation.y = animation.y * 2;
+      } 
+    });
+  }
+}
+
+adjustXValue();
+window.addEventListener('resize', adjustXValue);
+
+animations.forEach(animation => { 
+  var tweenParams = { duration: 300, x: animation.x };
+  if (animation.hasOwnProperty('x')) {
+    tweenParams.x = animation.x;
+  }
+  if (animation.hasOwnProperty('y')) {
+    tweenParams.y = animation.y;
+  } 
+  
+  var tween = gsap.to(animation.selector, tweenParams);
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: animation.selector,
+    duration: animation.duration
+  })
+  .setTween(tween)
+  .addTo(controller);
+});
+
+
+
+
+
+
+// music
 const wrapper = document.querySelector(".wrapper"),
   musicImg = wrapper.querySelector(".img-area img"),
   musicName = wrapper.querySelector(".song-details .name"),
@@ -88,10 +211,10 @@ playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
     audio.loop = true; 
-    wrapper.classList.add("playing"); // Tambahkan kelas jika diperlukan
+    wrapper.classList.add("playing"); 
   } else {
     audio.pause();
-    wrapper.classList.remove("playing"); // Hapus kelas jika diperlukan
+    wrapper.classList.remove("playing");  
   }
 
 });
@@ -259,5 +382,3 @@ function clicked(element) {
   playMusic();
   playingSong();
 }
-
- 
