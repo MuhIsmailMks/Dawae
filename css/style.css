@@ -916,6 +916,21 @@ ul li.playing {
     }
 }
 
+/* cloud */
+.rockets{
+    animation: rockets_animation 25s linear infinite; 
+}
+
+@keyframes rockets_animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-110vw)
+    }
+}
+
+
 /* memes */
 .memes_animation{
     animation: memes_animation 20s linear infinite; 
