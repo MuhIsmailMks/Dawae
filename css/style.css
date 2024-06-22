@@ -885,6 +885,10 @@ ul li.playing {
     justify-content:center;
 }
 
+#memes{
+    cursor: pointer;
+}
+
 .new_memes_text p{
     position:absolute;
 
