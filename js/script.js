@@ -15,7 +15,7 @@ copybtns.forEach(copybtn => {
         }
 
         intervalId = setInterval(() => {
-            textSpan.innerHTML = '0x00000000000000000000000.....dEaD'; 
+            textSpan.innerHTML = '0xa05912134d97d74ace060a76028724a543aaf7f7'; 
             clearInterval(intervalId);  
         }, 1000);
 
